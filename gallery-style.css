@@ -1,0 +1,327 @@
+@import url('https://fonts.googleapis.com/css?family=Pacifico|Srisakdi:400,700&subset=cyrillic,latin-ext');
+
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+
+                          /*HEADER*/
+                         /********/
+.container {
+    width: 100%;
+    max-width: 900px;
+    min-width: 200px;
+    height: 200px;
+    background-image:linear-gradient(to left, rgba(238, 130, 238, 0.21), pink, rgba(253, 221, 221, 0.1));
+    margin: auto;
+    margin-top: 60px;
+    box-shadow: 20px -15px 10px 5px rgba(0, 0, 0, .2);
+    
+}
+
+
+.navbar-collapse {
+    float: right;
+    width: 100%;
+    max-width: 200px;
+    min-width: 100px;
+    height: 100px;
+    display: flex;
+    justify-content:flex-end;
+    font-family: 'Pacifico', cursive;
+    font-style: italic;
+    font-size: 23px;
+    letter-spacing: 1px;
+    padding-top: 80px;
+    text-align: left;
+    margin-right: 90px;
+   
+
+    
+}
+
+.navbar-collapse a{
+    text-decoration: none;
+    color: black;
+}
+ 
+.navbar-collapse a:hover{
+    color: white;
+}
+
+.navbar-header  {
+    float: left;
+    width: 100%;
+    max-width: 500px;
+    min-width: 100px;
+    height: 100px;
+    text-align: center;
+    margin-left: 20px;
+    padding-top: 80px;
+}
+
+.navbar-header a{
+    text-decoration: none;
+    color: black;
+    font-size: 33px;
+    font-family: 'Pacifico', cursive;
+    font-style: italic;
+    letter-spacing: 3px;
+}
+
+.navbar-header a:hover{
+    letter-spacing: 5px;
+    color: rgba(250, 95, 232, 0.87);
+}
+
+
+
+                    /*GALLERY*/
+                   /*********/
+
+/* Задаем сброс обтекания */
+.clear {
+	margin-top: -1px;
+	height: 1px;
+	clear:both;
+	zoom: 1;
+}		
+/* Slider */
+.slider {
+	/* Ширина контейнера */
+	width: 100%;
+	max-width: 900px;
+	min-width: 200px;
+	/* Внешние тступы сверху и снизу */
+	margin: 50px auto;
+	/* Внутренние отступы для ссылок navy */
+	padding: 0 30px;
+	/* Позиционирование */
+	position: relative;
+	background-image:linear-gradient(to left, rgba(237, 60, 237, 0.99), pink, rgba(248, 207, 207, 0.92));
+    box-shadow: 20px 20px 10px 5px rgba(0, 0, 0, .2);
+	
+}
+/* Двойной клик по кнопкам вперед/назад вызывает выделение всех элементов слайдера,
+поэтому предотвращаем это */
+.slider::-moz-selection { background: transparent; color: #fff; text-shadow: none; }
+.slider::selection { background: transparent; color: #fff; text-shadow: none; }
+
+.slide-list {
+	position: relative;
+	margin: 0;
+	padding: 0;
+	/* Скроем то что выходит за границы */
+	overflow: hidden;
+}
+.slide-wrap {
+	position: relative;
+	left: 0px;
+	top: 0;
+	/* максимально возможная ширина обертки слайдера */
+	width: 10000000px;
+	margin-top: 30px;
+}
+.slide-item {
+	/* Ширина слайда */
+	width: 280px;
+	/* Внутренние отступы */
+	padding: 5px;
+	/* Обтекание */
+	float: left;
+	text-align: center;
+	
+}
+.slide-title {
+	/* Шрифт */
+	font: 18px monospace;
+	/* Указываем, что элемент блочный */
+	display: block;
+	font-style: italic;
+	font-family: 'Pacifico', cursive;
+    letter-spacing: 1px;
+}
+
+
+/* навигация вперед/назад */
+.navy {
+	/* абсолютное позиционирование */
+	position: absolute;
+	top: 0;
+	z-index: 1;
+	height: 100%;
+	/* ширина элементов */
+	width: 30px;
+	cursor: pointer;
+}
+.prev-slide {
+	left: 0;
+	background: rgba(248, 207, 207, 0.92) url(bg/left-arrow.png) 11px 40% no-repeat;
+}
+.next-slide {
+	right: 0;
+	background: rgba(237, 60, 237, 0.99) url(bg/right-arrow.png) 13px 40% no-repeat;
+}
+.navy.disable {
+	background: (248, 207, 207, 0.92);
+}
+/* навигация старт/пауза */
+.auto {
+	width: 7px;
+	height: 11px;
+	cursor: pointer;
+	margin: 10px auto;
+}
+.play {
+	background: url(bg/play.png) center no-repeat;
+}
+.pause {
+	background: url(bg/pause.png) center no-repeat;
+}
+
+
+#text {
+	width: 100%;
+	max-width: 700px;
+	min-width: 200px;
+	height: 500px;
+	margin: auto;
+	margin-top: 130px;
+	padding-left: 20px;
+	font-family: 'Pacifico', cursive;
+	font-style: italic;
+	padding-top: 30px;
+	font-size: 26px;
+	letter-spacing: 3px;
+	line-height: 33px;
+}
+
+
+
+#conteiner {
+	display: flex;
+	width: 100%;
+	max-width: 1000px;
+	min-width: 200px;
+	margin: auto;
+	margin-top: 50px;
+	margin-bottom: 50px;
+	justify-content: space-around;
+    box-shadow: 20px 20px 10px 5px rgba(0, 0, 0, .2);
+}
+
+.picture {
+	display: block;
+	border:5px solid pink;
+}
+
+.name {
+	width: 100%;
+	max-width: 1100px;
+	min-width: 200px;
+	margin: auto;
+	margin-top: 50px;
+	text-align: center;
+	font-family: 'Pacifico', cursive;
+    font-style: italic;
+	font-size: 35px;
+}
+
+
+                /*FOOTER*/
+               /*********/
+
+#social {
+    display: flex;
+    width: 100%;
+    max-width: 900px;
+    min-width: 100px;
+    height: auto;
+    margin: auto;
+    padding-top: 40px;
+    margin-top: 100px;
+    margin-bottom: 50px;
+    justify-content:space-around;
+    font-family: 'Pacifico', cursive;
+    box-shadow: 20px 20px 10px 5px rgba(0, 0, 0, .2);
+    font-style: italic;
+  
+    
+}
+
+#social h1{
+    font-size: 22px;
+}
+
+#social a img{
+    margin: 20px;
+    border-radius: 50%;
+    padding-top: 4px;
+    
+}  
+
+ #social a img:hover {
+  -webkit-transform: rotateZ(30deg);
+  -ms-transform: rotateZ(30deg);
+  transform: rotateZ(30deg);
+}   
+
+
+#social .text {
+    width: 100%;
+    max-width: 400px;
+    min-width: 100px;
+    height: auto;
+    line-height: 35px;
+    letter-spacing: 1px;
+    font-size: 25px;
+    margin-bottom: 10px;
+}
+
+#social .text:hover{
+    color: rgb(250, 48, 227);
+}
